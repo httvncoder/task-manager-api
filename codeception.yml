@@ -15,5 +15,5 @@ extensions:
         - Laravel5Extension
     config:
         Laravel5Extension:
-            db_connection: 'sqlite_testing'
+            db_connection: 'sqlite' # 'mysql'
             db_sqlite_database: 'storage/testing.sqlite'

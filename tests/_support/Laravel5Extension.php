@@ -42,7 +42,7 @@ class Laravel5Extension extends Extension
      */
     public function beforeSuite(SuiteEvent $e)
     {
-        $this->db_connection = $this->config['db_connection'] ?? "sqlite_testing";
+        $this->db_connection = $this->config['db_connection'] ?? "sqlite";
         $this->db_sqlite_database = $this->config['db_sqlite_database'] ?? "storage/testing.sqlite";
 
         // if using sqlite
