@@ -127,6 +127,7 @@ storage/
 .env.*.php
 .env.php
 .env
+.env.testing
 
 # Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
 .rocketeer/
@@ -134,3 +135,8 @@ storage/
 
 ### Misc ###
 _local
+
+
+### Codeception ###
+tests/api.suite.yml
+tests/_output/*

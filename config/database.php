@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION'),
 
     /*
     |--------------------------------------------------------------------------
@@ -46,10 +46,24 @@ return [
 
     'connections' => [
 
-        'sqlite' => [
+        'sqlite_testing' => [
             'driver' => 'sqlite',
-            'database' => env('DB_SQLITE_DATABASE'),
+            'database' => env('DB_SQLITE_TESTING_DATABASE'),
             'prefix' => '',
+        ],
+
+        'mysql_testing' => [
+            'driver' => 'mysql',
+            'host' => env('DB_MYSQL_TESTING_HOST', 'localhost'),
+            'port' => env('DB_MYSQL_TESTING_PORT', '3306'),
+            'database' => env('DB_MYSQL_TESTING_DATABASE'),
+            'username' => env('DB_MYSQL_TESTING_USERNAME'),
+            'password' => env('DB_MYSQL_TESTING_PASSWORD'),
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+            'strict' => false,
+            'engine' => null,
         ],
 
         'mysql' => [
